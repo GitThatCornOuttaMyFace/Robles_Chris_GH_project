@@ -236,6 +236,9 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
+        proceed = input('\nWould you like to continue? Enter yes or no.\n')
+        if proceed.lower() != 'yes':
+            break
         station_stats(df)
         trip_duration_stats(df)
 
