@@ -240,6 +240,9 @@ def main():
         if proceed.lower() != 'yes':
             break
         station_stats(df)
+        proceed = input('\nWould you like to continue? Enter yes or no.\n')
+        if proceed.lower() != 'yes':
+            break        
         trip_duration_stats(df)
 
         if city != 'washington':
