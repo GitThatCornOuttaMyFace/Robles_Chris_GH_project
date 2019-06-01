@@ -24,11 +24,11 @@ def get_filters():
             http://www.datasciencemadesimple.com/concatenate-two-columns-dataframe-pandas-python-2/
     """
 
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Welcome! Let\'s explore US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         try:
-            city = str(input('Which city would you like to analyze (chicago, new york city, washington)? '))
+            city = str(input('Which city would you like to investigate (chicago, new york city, washington)? '))
             if city.lower() not in ['chicago', 'new york city', 'washington']:
                 print('That\'s not a valid city, try again...')
                 continue
@@ -42,7 +42,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     while True:
         try:
-            month = str(input('Which month would you like to analyze (all, january, february, ... , june)? '))
+            month = str(input('Which month would you like to investigate (all, january, february, ... , june)? '))
             if month.lower() not in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
                 print('That\'s not a valid month, try again...')
                 continue
@@ -56,7 +56,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         try:
-            day = str(input('Which day would you like to analyze (all, monday, tuesday, ... sunday)? '))
+            day = str(input('Which day would you like to investigate (all, monday, tuesday, ... sunday)? '))
             if day.lower() not in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
                 print('That\'s not a valid day of the week, try again...')
                 continue
@@ -236,13 +236,13 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
-        proceed = input('\nWould you like to continue? Enter yes or no.\n')
+        proceed = input('\nWould you like to view Station statistics? Enter yes or no.\n')
         if proceed.lower() != 'yes':
             break
         station_stats(df)
-        proceed = input('\nWould you like to continue? Enter yes or no.\n')
+        proceed = input('\nWould you like to view Trip statistics? Enter yes or no.\n')
         if proceed.lower() != 'yes':
-            break        
+            break
         trip_duration_stats(df)
 
         if city != 'washington':
@@ -254,7 +254,7 @@ def main():
 
 
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to run this program again? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
