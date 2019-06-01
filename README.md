@@ -2,7 +2,9 @@
 
 ### Project Title: Robles_Chris_GH_project
 
-### Description: Load Bikeshare.py to Github, this Python Program crunches Bikeshare data from Chicago/NewYorkCity/Washington.
+### Description: Load Bikeshare.py to Github
+This Python Program crunches Bikeshare data from Chicago/NewYorkCity/Washington,
+and provides useful statistics for further analysis.
 
 ### Files used: bikeshare_2.py (.csv data is not tracked by the git repository)
 
